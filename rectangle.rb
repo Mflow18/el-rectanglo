@@ -45,7 +45,7 @@ end
   length = if x > 2
     b * (x - 2) + c
   elsif x == 2
-    a
+    c
   else
     ' '
   end
