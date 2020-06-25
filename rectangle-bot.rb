@@ -2,7 +2,7 @@
 
 class RectangleMaker
   def initialize
-end
+  end
 
   def make_rectangle(x, y, style)
     raise 'One of your values is nil' if x == 0 || y == 0
@@ -22,33 +22,33 @@ end
       b = '*'
       c = '\\'
     end
-    
+
     (0...y).each do |i|
-       if i == y - 1
-    
-      case style
+      if i == y - 1
+
+        case style
         when 1
-        a = 'o'
-        b = '-'
-        c = 'o'
+          a = 'o'
+          b = '-'
+          c = 'o'
         when 2
-        a = 'A'
-        b = '.'
-        c = 'B'
-         when 3
-        a = '\\'
-        b = '*'
-        c = '/'
+          a = 'A'
+          b = '.'
+          c = 'B'
+        when 3
+          a = '\\'
+          b = '*'
+          c = '/'
+        end
       end
-    end
-    
+
       length = if x > 2
-                 b * (x - 2) + c
-               elsif x == 2
-                 a
-               else
-                 ' '
-                   end
+        b * (x - 2) + c
+      elsif x == 2
+        a
+      else
+        ' '
+      end
       puts a + length
       case style
       when 1
